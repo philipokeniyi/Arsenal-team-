@@ -32,7 +32,7 @@ const arsenalTeam = {
       number: 22,
       country: "Spain",
       image: {
-        src: "./picture/dr.png",
+        src: "./picture/DR.png",
         alt: "David Raya",
       },
       isCaptain: false,
