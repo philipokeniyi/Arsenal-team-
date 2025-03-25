@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arsenal team stat</title>
+    <link rel="stylesheet" href="bftc.css" />
+    <link rel="icon" href="./picture/logo.svg" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="./picture/logo.svg" alt="logo" width="100" />
+      <h1>Arsenal Team Stats 2023/24</h1>
+      <div class="team-heading">
+        <p>Team: <span id="team"> </span></p>
+        <p>Sport: <span id="sports"> </span></p>
+        <p>Year: <span id="year"> </span></p>
+        <p>Coach: <span id="head-coach"></span></p>
+      </div>
+      <div class="dropdown-section">
+        <label for="players">Filter Teammates</label>
+        <select id="my-players">
+          <option value="all">All player</option>
+          <option value="goalkeeper">Position Goalkeeper</option>
+          <option value="defender">Position Defender</option>
+          <option value="midfielder">Position Midfielder</option>
+          <option value="forward">Position Forward</option>
+          <option value="coach">Coach</option>
+        </select>
+      </div>
+      <div class="all-player-container" id="my-players-cards">
+        <div class="player">
+          <div class="img">
+            <img src="./picture/AR.png" alt="Aaron Ramsdale" />
+          </div>
+          <h2>Aaron Ramsdale</h2>
+          <p>Position: Goalkeeper</p>
+          <p>Number: 1</p>
+          <p>Country: England</p>
+        </div>
+
+        <div class="player" id="my-players">
+          <div class="img">
+            <img src="./picture/DR.png" alt="David Raya" />
+          </div>
+          <h2>David Raya</h2>
+          <p>Position: Goalkeeper</p>
+          <p>Number: 22</p>
+          <p>Country: Spain</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/bw.png" alt="Ben White" />
+          </div>
+          <h2>Ben White</h2>
+          <p>Position: Defender</p>
+          <p>Number: 4</p>
+          <p>Country: England</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/gm.png" alt="Gabriel Magalhães" />
+          </div>
+          <h2>Gabriel Magalhães</h2>
+          <p>Position: Defender</p>
+          <p>Number: 6</p>
+          <p>Country: Brazil</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/ws.png" alt="William Saliba" />
+          </div>
+          <h2>William Saliba</h2>
+          <p>Position: Defender</p>
+          <p>Number: 2</p>
+          <p>Country: France</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/jk.png" alt="Jakub Kiwior" />
+          </div>
+          <h2>Jakub Kiwior</h2>
+          <p>Position: Defender</p>
+          <p>Number: 15</p>
+          <p>Country: Poland</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/tt.png" alt="Takehiro Tomiyasu" />
+          </div>
+          <h2>Takehiro Tomiyasu</h2>
+          <p>Position: Defender</p>
+          <p>Number: 18</p>
+          <p>Country: Japan</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/jt.png" alt="Jurriën Timber" />
+          </div>
+          <h2>Jurriën Timber</h2>
+          <p>Position: Defender</p>
+          <p>Number: 12</p>
+          <p>Country: Netherlands</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/cs.png" alt="Cédric Soares" />
+          </div>
+          <h2>Cédric Soares</h2>
+          <p>Position: Defender</p>
+          <p>Number: 17</p>
+          <p>Country: Portugal</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/tp.png" alt="Thomas Partey" />
+          </div>
+          <h2>Thomas Partey</h2>
+          <p>Position: Midfielder</p>
+          <p>Number: 5</p>
+          <p>Country: Ghana</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/mo.png" alt="Martin Ødegaard" />
+          </div>
+          <h2>Martin Ødegaard</h2>
+          <p>Position: Midfielder</p>
+          <p>Number: 8</p>
+          <p>Country: Norway</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/sr.png" alt="Emile Smith Rowe" />
+          </div>
+          <h2>Emile Smith Rowe</h2>
+          <p>Position: Midfielder</p>
+          <p>Number: 10</p>
+          <p>Country: England</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/j.png" alt="Jorginho" />
+          </div>
+          <h2>Jorginho</h2>
+          <p>Position: Midfielder</p>
+          <p>Number: 20</p>
+          <p>Country: Italy</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/fv.png" alt="Fábio Vieira" />
+          </div>
+          <h2>Fábio Vieira</h2>
+          <p>Position: Midfielder</p>
+          <p>Number: 21</p>
+          <p>Country: Portugal</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/me.png" alt="Mohamed Elneny" />
+          </div>
+          <h2>Mohamed Elneny</h2>
+          <p>Position: Midfielder</p>
+          <p>Number: 25</p>
+          <p>Country: Egypt</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/kh.png" alt="Kai Havertz" />
+          </div>
+          <h2>Kai Havertz</h2>
+          <p>Position: Midfielder</p>
+          <p>Number: 29</p>
+          <p>Country: Germany</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/drice.png" alt="Declan Rice" />
+          </div>
+          <h2>Declan Rice</h2>
+          <p>Position: Midfielder</p>
+          <p>Number: 41</p>
+          <p>Country: England</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/bs.png" alt="Bukayo Saka" />
+          </div>
+          <h2>Bukayo Saka</h2>
+          <p>Position: Forward</p>
+          <p>Number: 7</p>
+          <p>Country: England</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/gj.png" alt="Gabriel Jesus" />
+          </div>
+          <h2>Gabriel Jesus</h2>
+          <p>Position: Forward</p>
+          <p>Number: 9</p>
+          <p>Country: Brazil</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/gmart.png" alt="Gabriel Martinelli" />
+          </div>
+          <h2>Gabriel Martinelli</h2>
+          <p>Position: Forward</p>
+          <p>Number: 11</p>
+          <p>Country: Brazil</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/en.png" alt="Eddie Nketiah" />
+          </div>
+          <h2>Eddie Nketiah</h2>
+          <p>Position: Forward</p>
+          <p>Number: 14</p>
+          <p>Country: England</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/lt.png" alt="Leandro Trossard" />
+          </div>
+          <h2>Leandro Trossard</h2>
+          <p>Position: Forward</p>
+          <p>Number: 19</p>
+          <p>Country: Belgium</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/rn.png" alt="Reiss Nelson" />
+          </div>
+          <h2>Reiss Nelson</h2>
+          <p>Position: Forward</p>
+          <p>Number: 24</p>
+          <p>Country: England</p>
+        </div>
+
+        <div class="player">
+          <div class="img">
+            <img src="./picture/ma.png" alt="Mikel Arteta" width="200" />
+          </div>
+          <h2>Mikel Arteta</h2>
+          <p>Coach</p>
+          <p>Country: Spain</p>
+        </div>
+      </div>
+
+      <div class="footeer">
+        <p>&copy; Philip Okeniyi</p>
+      </div>
+    </div>
+    <script src="bftc.js"></script>
+  </body>
+</html>

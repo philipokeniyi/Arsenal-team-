@@ -1,0 +1,201 @@
+** start of undefined **
+
+<!DOCTYPE HTML>
+<html lang ="en">
+  <head>
+    <meta charset="UFT-8">
+    <meta name="veiwport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>The Roman Number Converter</title>
+  </head>
+  <body>
+    <div class ="container">
+
+      <h1>Roman Number Converter</h1>
+      <div class="input-container">
+        <form id="form-input" class="form-input">
+        <label for="number">Enter Your Number Here</label>
+        <input id="number" type="number" class="number"required>
+        <button id="convert-btn" class  ="convert-btn" type="button" >Convert</button>
+        </form>
+       
+      </div>
+
+      <div id="output" class="output hidden"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+*,*::before,*::after{
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+}
+
+body{
+  background-color:rgb(16, 23, 16);
+  color:white;
+}
+
+.container{
+   max-width:550px;
+  height:550px;
+  margin:20px auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+h1{
+  text-align:center;
+  font-size:40px;
+  margin:20px 40px;
+}
+.input-container{
+  border:5px solid yellow;
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  margin-bottom:20px;
+
+}
+.form-input{
+   display:flex;
+  flex-direction:column;
+  padding:40px;
+  align-items:center;
+ 
+}
+label,.number, .convert-btn{
+  margin:10px 40px;
+}
+label{
+  font-size:25px;
+  font-weight:bold;
+  text-align:center;
+}
+.number{
+ line-height: 1.4;
+  font-size:30px;
+  border:3px solid white;
+  background-color:rgb(16, 23, 16);
+  width:100%;
+  color:white;
+  padding:0 10px;
+}
+.convert-btn{
+  width:100%;
+  font-size:20px;
+  border:3px solid white;
+  background-color:orange;
+  color:rgb(16, 23, 16);
+  padding:10px;
+  cursor:pointer;
+}
+.output{
+  border:3px solid white;
+  background-color:orange;
+   
+    color:rgb(16, 23, 16);
+   font-size: 2.5rem;
+  width: 90%;
+  max-width: 500px;
+  min-height: 55px;
+  margin-top: 25px;
+  padding: 15px;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+.hidden{
+  display:none;
+}
+.alert {
+  font-size: 2rem;
+  background-color: rgb(246, 225, 225);
+  border: 3px solid black;
+  color: rgb(255, 2, 2);
+}
+
+** end of undefined **
+
+** start of undefined **
+
+const myForm=document.getElementById("form-input");
+const convertBtn=document.getElementById("convert-btn");
+const myOutput=document.getElementById("output");
+
+const numberToRoman=num=>{
+  const myRef=[
+    ['M', 1000],
+    ['CM',900],
+    ['D', 500],
+    ['CD', 400],
+    ['C', 100],
+    ['XC', 90],
+    ['L',50],
+    ['XL', 40],
+    ['X',10],
+    ['IX',9],
+    ['V',5],
+    ['IV', 4],
+    ['I',1],
+  ];
+  const myRes=[];
+
+  myRef.forEach(function (arr){
+    while(num>=arr[1]){
+      myRes.push(arr[0]);
+      num-=arr[1];
+    }
+  });
+  return myRes.join("");
+};
+
+const isValid=(str,int)=>{
+ let theErrorText=" ";
+
+ if(!str||str.match(/[e.]/g)){
+   theErrorText='Please enter a valid number.';
+ } else if(int<1){
+   theErrorText='Please enter a number greater than or equal to 1.';
+ }else if(int>3999){
+   theErrorText='Please enter a number less than or equal to 3999.';
+ }else {
+   return true;
+ }
+ myOutput.innerText=theErrorText;
+ myOutput.classList.add("alert");
+return false
+}
+
+const myUpdate =()=>{
+  const numStr=document.getElementById("number").value;
+  const int=parseInt(numStr,10);
+  myOutput.classList.remove("hidden");
+  clearOutput();
+
+  if(isValid(numStr,int)){
+    myOutput.innerText=numberToRoman(int);
+  }
+};
+
+const clearOutput = () => {
+  myOutput.innerText = '';
+  myOutput.classList.remove('alert');
+};
+
+myForm.addEventListener('submit', e => {
+  e.preventDefault();
+  myUpdate();
+});
+
+convertBtn.addEventListener('click', () => {
+  myUpdate();
+});
+
+** end of undefined **
+
